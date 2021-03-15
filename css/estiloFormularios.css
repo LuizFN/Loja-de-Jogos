@@ -1,0 +1,40 @@
+input[type=text], [type=date], [type=email], [type=password], select, textarea{
+    width: 80%; /*Define a Largura do seletor*/
+    padding: 12px 20px; /*Define o Espaçamento*/
+    margin: 8px 0; /*Define a Margem*/
+    display: inline-block; /*Define que serão alinhados em blocos*/
+    border: 1px solid #ccc; /*Define bordas*/
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #4CAF50;
+    font-size: 12pt;
+    box-shadow: 5px 5px 10px #000;
+}
+
+input[type=file], [type=submit], [type=reset]{
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border:none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px #000;
+}
+
+input[type=file]:hover, [type=submit]:hover, [type=reset]:hover{
+    background-color: #45A049;
+}
+
+.divFormulario {
+    margin-top: 20px;
+    font-weight: bold;
+    border-radius: 15px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 100%;
+    color: #4CAF50;
+    box-shadow: 5px 5px 10px #000;
+}
