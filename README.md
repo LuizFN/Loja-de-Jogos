@@ -1,2 +1,3 @@
-# loja de jogos
- prototipo loja de jogos
+# Loja de Jogos
+,
+Um prototipo do sistema de cadastro de uma loja de jogos.
