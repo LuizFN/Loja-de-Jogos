@@ -2,30 +2,32 @@
 
     class cliente {
 
-    private $pdo;
-
-    public function __construct($dbname, $host, $user, $senha) {
-
-    try {
-        $this->pdo = new PDO("mysql:dbname=".$dbname.";host=".$host,$user,$senha);
-    } 
-    catch (PDOException $e) {
-        echo "Erro com banco de dados" .$e->getMesege();
-    }
-
-    catch (Exception $e) {
-        echo "Erro fatal" .$e->getMesege();
-    }
     
+
+    public function conn() {
+
+        $pdo;
+
+        try {
+            $pdo = new PDO("mysql:dbname=".loja.";host=".localhost,root,'');
+        } 
+        catch (PDOException $e) {
+            echo "Erro com banco de dados" .$e->getMesege();
+        }
+
+        catch (Exception $e) {
+            echo "Erro fatal" .$e->getMesege();
+    }
+    return $pdo;
 }
 //BUSCAR DADOS E COLOCAR NA TABELA
     public function buscarDados() {
 
     $res = array();
 
-    $cmd = $this->pdo->query("SELECT * FROM clientes ORDER BY nome");
+    $sql = $this->conn()->query("SELECT * FROM clientes ORDER BY nome");
     
-    $res = $cmd->fetchAll(PDO::FETCH_ASSOC);
+    $res = $sql->fetchAll(PDO::FETCH_ASSOC);
     return $res;
 }
 
