@@ -2,7 +2,7 @@
 
 require_once 'class/class_cliente.php';
 
-$c = new cliente("loja","localhost","root","");
+$c = new cliente();
 
 ?>
 

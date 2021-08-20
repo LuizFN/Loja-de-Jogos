@@ -34,7 +34,7 @@
 
     public function cadastrarCliente($cpf, $nome, $telefone, $email, $endereco, $cidade, $estado, $dtn, $username, $pass) {
         //VERIFICA SE JA A CADASTRO
-        $cmd = $this->pdo->prepare("SELECT CPF from clientes WHERE email = :e");
+        $cmd = $this->conn()->prepare("SELECT CPF from clientes WHERE email = :e");
 
         $cmd->bindValue(":e",$email);
 
